@@ -1,0 +1,20 @@
+{
+  "name": "dinus-aspiration",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "bun@1.4.5",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"bun run dev:api\" \"bun run dev:web\"",
+    "dev:api": "bun run --filter api dev",
+    "dev:web": "bun run --filter web dev",
+    "build": "bun run --filter web build",
+    "typecheck": "bun run --filter '*' typecheck",
+    "check": "bun run --filter web check"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
