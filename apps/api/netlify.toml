@@ -1,0 +1,8 @@
+# Site base directory: apps/api (set in Netlify UI).
+# Install from the workspace root so bun.lock is used.
+[build]
+  command = "cd ../.. && bun install --frozen-lockfile"
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
