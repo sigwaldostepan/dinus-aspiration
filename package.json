@@ -8,12 +8,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "concurrently \"bun run dev:api\" \"bun run dev:web\"",
+    "dev": "concurrently \"bun run dev:api\" \"bun run dev:web\" \"bun run dev:admin-web\"",
     "dev:api": "bun run --filter api dev",
     "dev:web": "bun run --filter web dev",
-    "build": "bun run --filter web build",
+    "dev:admin-web": "bun run --filter admin-web dev",
+    "build": "bun run --filter web build && bun run --filter admin-web build",
     "typecheck": "bun run --filter '*' typecheck",
-    "check": "bun run --filter web check"
+    "check": "bun run --filter web check && bun run --filter admin-web check"
   },
   "devDependencies": {
     "concurrently": "^10.0.7"

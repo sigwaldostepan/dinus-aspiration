@@ -6,16 +6,16 @@ Guide for agents working in the `dinus-aspiration` monorepo.
 
 - `apps/web`: frontend (TanStack Start, Rsbuild, Tailwind v4). See `apps/web/AGENTS.md`.
 - `apps/api`: backend (Elysia, Drizzle, Supabase). See `apps/api/AGENTS.md`.
-- `apps/admin`: planned, not created yet.
+- `apps/admin-web`: admin frontend (TanStack Start, Rsbuild, Tailwind v4). See `apps/admin-web/AGENTS.md`.
 - `packages/ui`: shadcn components (Radix) and shared theme tokens.
 - `packages/config`: shared configuration (`tsconfig.base.json`).
 
 ## Commands
 
-- `bun run dev`: run api and web.
-- `bun run build`: build web.
+- `bun run dev`: run api, web, and admin-web.
+- `bun run build`: build web and admin-web.
 - `bun run typecheck`: typecheck all workspaces.
-- `bun run check`: Biome on web.
+- `bun run check`: Biome on web and admin-web.
 
 ## Rules
 
@@ -24,5 +24,5 @@ Guide for agents working in the `dinus-aspiration` monorepo.
 - Components in `packages/ui` must be generic, with no feature or domain logic.
 - Add dependencies to the workspace that uses them.
 - Import shared packages by package name (`@dinus-aspiration/...`), not by relative paths across packages.
-- Do not edit `apps/web/src/routeTree.gen.ts` or `dist/` by hand.
+- Do not edit `apps/*/src/routeTree.gen.ts` or `dist/` by hand.
 - Intent skills: follow the block in `apps/web/AGENTS.md`. Load a skill with `bunx @tanstack/intent@latest intent load <package>#<skill>`.

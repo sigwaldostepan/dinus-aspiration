@@ -1,0 +1,10 @@
+{
+  "extends": "@dinus-aspiration/config/tsconfig.base.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "paths": {
+      "#/*": ["./src/*"]
+    },
+    "types": ["@rsbuild/core/types"]
+  }
+}
