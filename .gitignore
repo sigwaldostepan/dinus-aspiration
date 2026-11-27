@@ -6,5 +6,7 @@ dist-ssr/
 .vercel/
 .env
 .env.*
+!.env.example
+!apps/web/.env.example
 *.log
 .DS_Store

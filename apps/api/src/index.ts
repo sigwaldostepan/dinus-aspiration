@@ -1,4 +1,5 @@
 import { app } from "./app";
+import "./infra/config/env";
 
 const server = app.listen(process.env.PORT ?? 3001);
 

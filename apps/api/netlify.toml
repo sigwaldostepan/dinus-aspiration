@@ -2,7 +2,9 @@
 # Install from the workspace root so bun.lock is used.
 [build]
   command = "cd ../.. && bun install --frozen-lockfile"
-  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "24"
 
 [functions]
   directory = "netlify/functions"
