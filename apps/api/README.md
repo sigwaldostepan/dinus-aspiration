@@ -32,7 +32,7 @@ Atur variabel berikut di Netlify UI (Site configuration > Environment variables)
 
 - `DATABASE_URL`
 - `S3_ENDPOINT`, `S3_REGION`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, `S3_BUCKET`
-- `CORS_ORIGIN`: origin web, dipisah koma.
+- `CORS_ORIGIN`: origin web, dipisah koma atau JSON array (contoh: `["http://localhost:3000","http://localhost:3002"]`).
 - `LOG_LEVEL` (opsional)
 
 Migrasi database tidak dijalankan saat deploy. Jalankan manual dengan `drizzle-kit` dari folder ini.

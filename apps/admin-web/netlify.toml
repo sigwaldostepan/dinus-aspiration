@@ -1,0 +1,8 @@
+# Site base directory: apps/admin-web (set in Netlify UI).
+# Install from the workspace root so bun.lock is used, then build the admin-web app.
+[build]
+  command = "cd ../.. && bun install --frozen-lockfile && cd apps/admin-web && bun run build && rm -rf dist/server/assets"
+  publish = "dist/client"
+
+[functions]
+  directory = "netlify/functions"
